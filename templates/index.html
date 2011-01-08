@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Flames Game</title>
+<style type="text/css">
+</style>
+</head>
+<body>
+<div class="container">
+<h1 style="text-align:center">Flames</h1>
+<div class="input-content">
+<form  style="margin-left:40%" action="{%url views.show%}" method="post">
+<table>
+<tr>
+<td><label>First Name: </label></td>
+<td><input type="text" name="male_name" value="{%if male_name%}{{male_name}}{%endif%}"/></td>
+</tr>
+<tr>
+<td><label>Second Name: </label></td>
+<td><input type="text" name="female_name" value="{%if female_name%}{{female_name}}{%endif%}"/></td>
+</tr>
+<tr><td></td><td><input type="submit" value="Get Result"></td></tr>
+</table>
+</form>
+<div style="text-align:center"> 
+<h3>{%if result%}Result: {{result}}{%endif%}</h3>
+</div>
+</div>
+</div>
+<body>
+</html>
