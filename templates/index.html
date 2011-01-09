@@ -4,27 +4,29 @@
 <head>
 <title>Flames Game</title>
 <style type="text/css">
+.center { text-align: center; }
+form { margin-left:40%; }
 </style>
 </head>
 <body>
 <div class="container">
-<h1 style="text-align:center">Flames</h1>
+<h1 class="center">Flames</h1>
 <div class="input-content">
-<form  style="margin-left:40%" action="{%url views.show%}" method="post">
+<form action="{%url views.show%}" method="post">
 <table>
 <tr>
-<td><label>First Name: </label></td>
-<td><input type="text" name="male_name" value="{%if male_name%}{{male_name}}{%endif%}"/></td>
+<td><label>Your Name: </label></td>
+<td><input type="text" name="your_name" value="{%if your_name%}{{your_name}}{%endif%}"/></td>
 </tr>
 <tr>
-<td><label>Second Name: </label></td>
-<td><input type="text" name="female_name" value="{%if female_name%}{{female_name}}{%endif%}"/></td>
+<td><label>Dream Partner: </label></td>
+<td><input type="text" name="partner_name" value="{%if partner_name%}{{partner_name}}{%endif%}"/></td>
 </tr>
-<tr><td></td><td><input type="submit" value="Get Result"></td></tr>
+<tr><td></td><td><input type="submit" value="Show Me"></td></tr>
 </table>
 </form>
-<div style="text-align:center"> 
-<h3>{%if result%}Result: {{result}}{%endif%}</h3>
+<div class="center"> 
+<h3>{%if result%}{{result}}{%endif%}</h3>
 </div>
 </div>
 </div>

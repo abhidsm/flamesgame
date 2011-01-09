@@ -22,7 +22,23 @@ def index(request):
     return shortcuts.render_to_response('index.html')
 
 def show(request):
-    male_name = request['male_name']
-    female_name = request['female_name']
-    result = flames.calculate(male_name, female_name)
-    return shortcuts.render_to_response('index.html',{'result' : result, 'male_name' : male_name, 'female_name' : female_name})
+    your_name = request['your_name']
+    partner_name = request['partner_name']
+    result = flames.calculate(your_name, partner_name)
+    final_result = get_result(result, partner_name)
+    return shortcuts.render_to_response('index.html',{'result' : final_result, 'your_name' : your_name, 'partner_name' : partner_name})
+
+def get_result(result, partner_name):
+    if result == 'F':
+        return "'" + partner_name + "' is your Friend"
+    elif result == 'L':
+        return "'" + partner_name + "' loves you"
+    elif result == 'A':
+        return "'" + partner_name + "' is attracted towards you"
+    elif result == 'M':
+        return "You will get Married to '" + partner_name + "'"
+    elif result == 'E':
+        return "'" + partner_name + "' is your sworn Enemy"
+    elif result == 'S':
+        return "'" + partner_name + "' is your loving Sister"
+

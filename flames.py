@@ -22,18 +22,7 @@ def flames_result(count):
 def calculate(male_name, female_name):
     count = flames_count(male_name, female_name)
     result = flames_result(count)
-    if result == 'F':
-        return "Friend"
-    elif result == 'L':
-        return "Love"
-    elif result == 'A':
-        return "Angry"
-    elif result == 'M':
-        return "Marriage"
-    elif result == 'E':
-        return "Enemy"
-    elif result == 'S':
-        return "Sister"
+    return result
         
     
 
