@@ -1,31 +1,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
   "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<title>Flames Game</title>
-<link rel=StyleSheet href="media/css/style.css" type="text/css">
-</head>
-<body>
-<div class="container">
-<h1 class="center">Flames</h1>
-<div class="input-content">
-<form action="{%url views.show%}" method="post">
-<table>
-<tr>
-<td><label>Your Name: </label></td>
-<td><input type="text" name="your_name" value="{%if your_name%}{{your_name}}{%endif%}"/></td>
-</tr>
-<tr>
-<td><label>Dream Partner: </label></td>
-<td><input type="text" name="partner_name" value="{%if partner_name%}{{partner_name}}{%endif%}"/></td>
-</tr>
-<tr><td></td><td><input type="submit" value="Show Me"></td></tr>
-</table>
-</form>
-<div class="center"> 
-<h3>{%if result%}{{result}}{%endif%}</h3>
-</div>
-</div>
-</div>
-<body>
+  <head>
+    <title>Flames Game</title>
+    <link rel=StyleSheet href="media/css/style.css" type="text/css">
+    <link rel=StyleSheet href="media/css/screen.css" type="text/css" media="screen, projection">
+  <!--[if lt IE 8]><link rel="stylesheet" href="media/css/ie.css" type="text/css" media="screen, projection"><![endif]--> 
+  </head>
+  <body>
+    <div class="header">
+      <h1>Flames</h1>
+    </div>
+    <div class="container">
+      <hr class="space">
+      <h2 class="center span-12 prepend-6 append-6 last">Do you want to know your ..........?</h2>
+      <div class="span-24">
+	<form action="{%url views.show%}" method="post">
+	     <div class="prepend-7 span-17 last">
+	       <label for="your_name">Your Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+	      <input type="text" class="title" name="your_name" id="your_name" value="{%if your_name%}{{your_name}}{%endif%}"/>
+	     </div>
+	     <div class="prepend-7 span-17 last">
+	       <label for="partner_name">Dream Partner: </label>
+	       <input type="text" class="title" name="partner_name" id="partner_name" value="{%if partner_name%}{{partner_name}}{%endif%}"/>
+	     </div>
+	     <hr class="space">
+	    <div class="prepend-11 span-2 append-11 last"><input type="submit" value="Show Me"></div>
+	</form>
+	<hr class="space">
+	<div class="center prepend-7 span-10 append-7 last"> 
+	  <h3>{%if result%}{{result}}{%endif%}</h3>
+	</div>
+      </div>
+    </div>
+    <div class="footer">
+    </div>
+  <body>
 </html>

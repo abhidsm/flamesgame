@@ -13,6 +13,10 @@ handlers:
   static_files: media/css/\1
   upload: media/css/(.*)
 
+- url: /media/images/(.*)
+  static_files: media/images/\1
+  upload: media/images/(.*)
+
 - url: .*
   script: main.py
 

@@ -1,2 +1,5 @@
+body { background-image: url("../../media/images/bg.jpg") !important; background-repeat: repeat !important; }
+.header, .footer { height: 50px; margin-right:0; width: auto; clear: both; }
+.header {background-color: black !important;}
+.header h1 { color: #fff !important; padding:3px !important;} 
 .center { text-align: center; }
-form { margin-left:40%; }
