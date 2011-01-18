@@ -3,3 +3,4 @@ body { background-image: url("../../media/images/bg.jpg") !important; background
 .header {background-color: black !important;}
 .header h1 { color: #fff !important; padding:3px !important;} 
 .center { text-align: center; }
+.footer {margin-top: 10px;}
