@@ -5,6 +5,9 @@ api_version: 1
 
 handlers:
 
+- url: /google17492bafd12f8b09.html
+  static_files: templates/google17492bafd12f8b09.html
+  upload: templates/google17492bafd12f8b09.html
 - url: /favicon.ico
   static_files: media/images/favicon.ico
   upload: media/images/favicon.ico
