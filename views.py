@@ -26,7 +26,8 @@ def show(request):
     partner_name = request['partner_name']
     result = flames.calculate(your_name, partner_name)
     final_result = get_result(result, partner_name)
-    return shortcuts.render_to_response('index.html',{'result' : final_result, 'your_name' : your_name, 'partner_name' : partner_name})
+    share_message = "Do you want to know what type of relationship you are going to have with your dream partner? Check "
+    return shortcuts.render_to_response('index.html',{'result' : final_result, 'your_name' : your_name, 'partner_name' : partner_name, 'share_message' : share_message})
 
 def get_result(result, partner_name):
     if result == 'F':
@@ -40,5 +41,5 @@ def get_result(result, partner_name):
     elif result == 'E':
         return "'" + partner_name + "' is your sworn Enemy"
     elif result == 'S':
-        return "'" + partner_name + "' is your loving Sister"
+        return "'" + partner_name + "' is your Sibling"
 

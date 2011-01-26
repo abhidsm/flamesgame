@@ -19,8 +19,15 @@ def flames_result(count):
         flames_list = flames_list[remove_count - 1:] + flames_list[:remove_count - 1]
     return flames_list[0]
 
-def calculate(male_name, female_name):
-    count = flames_count(male_name, female_name)
+def filter_text(name_text):
+    space_removed_text = name_text.replace(' ',"")
+    dot_removed_text = space_removed_text.replace('.',"")
+    return dot_removed_text.lower()
+
+def calculate(your_name, partner_name):
+    first_name = filter_text(your_name)
+    second_name = filter_text(partner_name)
+    count = flames_count(first_name, second_name)
     result = flames_result(count)
     return result
         
