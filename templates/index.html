@@ -44,6 +44,10 @@
 	       <label for="partner_name">Dream Partner: </label>
 	       <input type="text" class="title" name="partner_name" id="partner_name" value="{%if partner_name%}{{partner_name}}{%endif%}"/>
 	     </div>
+	     <div class="prepend-7 span-17 last">
+	       <input type="checkbox" name="allow_share" id="allow_share" {%if allow_share %} checked="checked" {% endif %}/>
+	       <label for="allow_share">Share the result with Flames ( Facebook, Twitter, Buzz )</label>
+	     </div>
 	     <hr class="space">
 	    <div class="prepend-11 span-2 append-11 last"><input type="submit" value="Show Me"></div>
 	</form>

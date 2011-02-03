@@ -17,17 +17,23 @@ import flames
 import django
 from django import http
 from django import shortcuts
+from google.appengine.api import mail
+import threading
 
 def index(request):
-    return shortcuts.render_to_response('index.html')
+    return shortcuts.render_to_response('index.html', {'allow_share' : 'on'})
 
 def show(request):
     your_name = request['your_name']
     partner_name = request['partner_name']
     result = flames.calculate(your_name, partner_name)
     final_result = get_result(result, partner_name)
+    allow_share = request.POST.get('allow_share','')
+#    if allow_share == '' :
+    SendEmail('Flames Result for ' + your_name + " and " + partner_name, final_result).start()
     share_message = "Do you want to know what type of relationship you are going to have with your dream partner? Check "
-    return shortcuts.render_to_response('index.html',{'result' : final_result, 'your_name' : your_name, 'partner_name' : partner_name, 'share_message' : share_message})
+    return shortcuts.render_to_response('index.html',{'result' : final_result, 'your_name' : your_name, 'partner_name' : partner_name, 'share_message' : share_message, 'allow_share' : allow_share })
+
 
 def get_result(result, partner_name):
     if result == 'F':
@@ -42,4 +48,15 @@ def get_result(result, partner_name):
         return "'" + partner_name + "' is your sworn Enemy"
     elif result == 'S':
         return "'" + partner_name + "' is your Sibling"
+
+class SendEmail(threading.Thread): 
+    def __init__(self, subject, body):
+        self.user_address = "flames.game.app@gmail.com"
+        self.sender_address = "abhidsm@gmail.com"
+        self.subject = subject
+        self.body = body
+        threading.Thread.__init__(self)
+    
+    def run(self):
+        mail.send_mail(self.sender_address, self.user_address, self.subject, self.body)
 
