@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	  "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
     <title>Flames Game: Find what relationship you are going to have with your dream partner or lover</title>
@@ -32,47 +31,50 @@
       <h1>Flames</h1>
     </div>
     <div class="container">
-      <hr class="space">
-      <div class="title-div span-24"><h2 class="center span-12 prepend-6 append-6 last">Do you know your partner?</h2></div>
-      <div class="span-24 content-div">
-	<form action="{%url views.show%}" method="post">
-	  <div class="prepend-7 span-17 last">
-	    <label for="your_name">Your Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	    <input type="text" class="title" name="your_name" id="your_name" value="{%if your_name%}{{your_name}}{%endif%}"/>
-	  </div>
-	  <div class="prepend-7 span-17 last">
-	    <label for="partner_name">Dream Partner: </label>
-	    <input type="text" class="title" name="partner_name" id="partner_name" value="{%if partner_name%}{{partner_name}}{%endif%}"/>
-	  </div>
-	  <div class="prepend-7 span-17 last">
-	    <input type="checkbox" name="allow_share" id="allow_share" {%if allow_share %} checked="checked" {% endif %}/>
-	    <label for="allow_share">Share the result with Flames ( Facebook, Twitter, Buzz )</label>
-	  </div>
+      <div class="span-6">.</div>
+      <div class="span-12">
+	<div class="title-div span-12"><h2 class="center span-12 last">Do you know your partner?</h2></div>
+	<div class="span-12 content-div">
+	  <form action="{%url views.show%}" method="post">
+	    <div class="prepend-1 span-11 last">
+	      <label for="your_name">Your Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+	      <input type="text" class="title" name="your_name" id="your_name" value="{%if your_name%}{{your_name}}{%endif%}"/>
+	    </div>
+	    <div class="prepend-1 span-11 last">
+	      <label for="partner_name">Dream Partner: </label>
+	      <input type="text" class="title" name="partner_name" id="partner_name" value="{%if partner_name%}{{partner_name}}{%endif%}"/>
+	    </div>
+	    <div class="prepend-1 span-11 last">
+	      <input type="checkbox" name="allow_share" id="allow_share" {%if allow_share %} checked="checked" {% endif %}/>
+	      <label for="allow_share">Share the result with Flames ( Facebook, Twitter, Buzz )</label>
+	    </div>
+	    <hr class="space">
+	    <div class="prepend-5 span-2 append-5 last"><input type="submit" value="Show Me"></div>
+	  </form>
 	  <hr class="space">
-	  <div class="prepend-11 span-2 append-11 last"><input type="submit" value="Show Me"></div>
-	</form>
-	<hr class="space">
-	<div class="center prepend-7 span-10 append-7 last"> 
-	  <h3>{%if result%}{{result}}{%endif%}</h3>
+	  <div class="center span-12 last"> 
+	    <h3>{%if result%}{{result}}{%endif%}</h3>
+	  </div>
 	</div>
-      </div>
-      <div class="footer span-24">
-	<div class="prepend-7 span-2">
-	  <a href="http://www.google.com/buzz/post" class="google-buzz-button" title="Google Buzz" data-message="Do you want to know what type of relationship you are going to have with your dream partner?" data-url="http://www.flamesgame.appspot.com" data-locale="en" data-button-style="small-count"></a>
-	  <script type="text/javascript" src="http://www.google.com/buzz/api/button.js"></script>
-	</div>
-	<div class="prepend-1 span-2">
-	  <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-counturl="http://flamesgame.appspot.com" data-url="http://flamesgame.appspot.com" data-text="Do you want to know what type of relationship you are going to have with your dream partner? Check ">Tweet</a>
-	</div>
-	<div class="prepend-1 span-2">
-	  <fb:like href="http://flamesgame.appspot.com" layout="button_count" show_faces="true" width="100"></fb:like>
-	</div>
-	<div class="prepend-1 span-2 append-2">
-	  <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+	<div class="footer span-12">
+	  <div class="prepend-1 span-2">
+	    <a href="http://www.google.com/buzz/post" class="google-buzz-button" title="Google Buzz" data-message="Do you want to know what type of relationship you are going to have with your dream partner?" data-url="http://www.flamesgame.appspot.com" data-locale="en" data-button-style="small-count"></a>
+	    <script type="text/javascript" src="http://www.google.com/buzz/api/button.js"></script>
+	  </div>
+	  <div class="prepend-1 span-2">
+	    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-counturl="http://flamesgame.appspot.com" data-url="http://flamesgame.appspot.com" data-text="Do you want to know what type of relationship you are going to have with your dream partner? Check ">Tweet</a>
+	  </div>
+	  <div class="prepend-1 span-2">
+	    <fb:like href="http://flamesgame.appspot.com" layout="button_count" show_faces="true" width="100"></fb:like>
+	  </div>
+	  <div class="span-2">
+	    <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
 
-	  <a name="fb_share" type="button" share_url="http://flamesgame.appspot.com"></a>
+	    <a name="fb_share" type="button" share_url="http://flamesgame.appspot.com"></a>
+	  </div>
 	</div>
       </div>
+      <div class="span-6"></div>
     </div>
   <body>
 </html>
