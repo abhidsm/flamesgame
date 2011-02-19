@@ -1,6 +1,12 @@
-body { background-image: url("../../media/images/bg.jpg") !important; background-repeat: repeat !important; }
-.header, .footer { height: 50px; margin-right:0; width: auto; clear: both; }
-.header {background-color: black !important;}
+/*body { background-image: url("../../media/images/bg.jpg") !important; background-repeat: repeat !important; }*/
+.header, .footer {  margin-right:0;  clear: both; }
+.header {background-color: black !important; height: 50px; width: auto; margin-bottom: 50px;}
 .header h1 { color: #fff !important; padding:3px !important;} 
 .center { text-align: center; }
-.footer {margin-top: 10px;}
+.footer { padding-top: 10px; background-color: grey; height: 30px; 
+          border-bottom-right-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px;
+          border-bottom-left-radius: 8px; -moz-border-radius-bottomleft: 8px; -webkit-border-bottom-left-radius: 8px;}
+.title-div h2 { background-color: grey; color: white; margin-bottom: 0;}
+.title-div, .title-div h2 { border-top-right-radius: 8px; -moz-border-radius-topright: 8px; -webkit-border-top-right-radius: 8px; border-top-left-radius: 8px; -moz-border-radius-topleft: 8px; -webkit-border-top-left-radius: 8px; }
+.content-div {  padding-top: 20px;}
+.content-div, .title-div, .footer { border-left: 1px solid grey; border-right: 1px solid grey; }

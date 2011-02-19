@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd">
+	  "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
     <title>Flames Game: Find what relationship you are going to have with your dream partner or lover</title>
@@ -7,25 +7,25 @@
     <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
     <link rel=StyleSheet href="media/css/style.css" type="text/css">
     <link rel=StyleSheet href="media/css/screen.css" type="text/css" media="screen, projection">
-  <!--[if lt IE 8]><link rel="stylesheet" href="media/css/ie.css" type="text/css" media="screen, projection"><![endif]--> 
-  <meta property="og:title" content="FlamesGame" />
-  <meta property="og:url" content="http://www.flamesgame.appspot.com"/>
-  <meta property="og:site_name" content="FlamesGame"/>
-  <meta property="og:description"
-        content="Do you want to know what type of relationship you are going to have with your dream partner?"/>
-  <script type="text/javascript">
+    <!--[if lt IE 8]><link rel="stylesheet" href="media/css/ie.css" type="text/css" media="screen, projection"><![endif]--> 
+    <meta property="og:title" content="FlamesGame" />
+    <meta property="og:url" content="http://www.flamesgame.appspot.com"/>
+    <meta property="og:site_name" content="FlamesGame"/>
+    <meta property="og:description"
+          content="Do you want to know what type of relationship you are going to have with your dream partner?"/>
+    <script type="text/javascript">
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-20872263-1']);
-    _gaq.push(['_trackPageview']);
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20872263-1']);
+      _gaq.push(['_trackPageview']);
 
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
 
-  </script>
+    </script>
   </head>
   <body>
     <div class="header">
@@ -33,45 +33,45 @@
     </div>
     <div class="container">
       <hr class="space">
-      <h2 class="center span-12 prepend-6 append-6 last">Do you know your partner?</h2>
-      <div class="span-24">
+      <div class="title-div span-24"><h2 class="center span-12 prepend-6 append-6 last">Do you know your partner?</h2></div>
+      <div class="span-24 content-div">
 	<form action="{%url views.show%}" method="post">
-	     <div class="prepend-7 span-17 last">
-	       <label for="your_name">Your Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	      <input type="text" class="title" name="your_name" id="your_name" value="{%if your_name%}{{your_name}}{%endif%}"/>
-	     </div>
-	     <div class="prepend-7 span-17 last">
-	       <label for="partner_name">Dream Partner: </label>
-	       <input type="text" class="title" name="partner_name" id="partner_name" value="{%if partner_name%}{{partner_name}}{%endif%}"/>
-	     </div>
-	     <div class="prepend-7 span-17 last">
-	       <input type="checkbox" name="allow_share" id="allow_share" {%if allow_share %} checked="checked" {% endif %}/>
-	       <label for="allow_share">Share the result with Flames ( Facebook, Twitter, Buzz )</label>
-	     </div>
-	     <hr class="space">
-	    <div class="prepend-11 span-2 append-11 last"><input type="submit" value="Show Me"></div>
+	  <div class="prepend-7 span-17 last">
+	    <label for="your_name">Your Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+	    <input type="text" class="title" name="your_name" id="your_name" value="{%if your_name%}{{your_name}}{%endif%}"/>
+	  </div>
+	  <div class="prepend-7 span-17 last">
+	    <label for="partner_name">Dream Partner: </label>
+	    <input type="text" class="title" name="partner_name" id="partner_name" value="{%if partner_name%}{{partner_name}}{%endif%}"/>
+	  </div>
+	  <div class="prepend-7 span-17 last">
+	    <input type="checkbox" name="allow_share" id="allow_share" {%if allow_share %} checked="checked" {% endif %}/>
+	    <label for="allow_share">Share the result with Flames ( Facebook, Twitter, Buzz )</label>
+	  </div>
+	  <hr class="space">
+	  <div class="prepend-11 span-2 append-11 last"><input type="submit" value="Show Me"></div>
 	</form>
 	<hr class="space">
 	<div class="center prepend-7 span-10 append-7 last"> 
 	  <h3>{%if result%}{{result}}{%endif%}</h3>
 	</div>
       </div>
-    </div>
-    <div class="footer">
-      <div class="prepend-11 span-2">
-	<a href="http://www.google.com/buzz/post" class="google-buzz-button" title="Google Buzz" data-message="Do you want to know what type of relationship you are going to have with your dream partner?" data-url="http://www.flamesgame.appspot.com" data-locale="en" data-button-style="small-count"></a>
-	<script type="text/javascript" src="http://www.google.com/buzz/api/button.js"></script>
-      </div>
-      <div class="prepend-1 span-2">
-	<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-counturl="http://flamesgame.appspot.com" data-url="http://flamesgame.appspot.com" data-text="Do you want to know what type of relationship you are going to have with your dream partner? Check ">Tweet</a>
-      </div>
-      <div class="prepend-1 span-2">
-	<fb:like href="http://flamesgame.appspot.com" layout="button_count" show_faces="true" width="100"></fb:like>
-      </div>
-      <div class="prepend-1 span-2 append-2">
-	<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+      <div class="footer span-24">
+	<div class="prepend-7 span-2">
+	  <a href="http://www.google.com/buzz/post" class="google-buzz-button" title="Google Buzz" data-message="Do you want to know what type of relationship you are going to have with your dream partner?" data-url="http://www.flamesgame.appspot.com" data-locale="en" data-button-style="small-count"></a>
+	  <script type="text/javascript" src="http://www.google.com/buzz/api/button.js"></script>
+	</div>
+	<div class="prepend-1 span-2">
+	  <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-counturl="http://flamesgame.appspot.com" data-url="http://flamesgame.appspot.com" data-text="Do you want to know what type of relationship you are going to have with your dream partner? Check ">Tweet</a>
+	</div>
+	<div class="prepend-1 span-2">
+	  <fb:like href="http://flamesgame.appspot.com" layout="button_count" show_faces="true" width="100"></fb:like>
+	</div>
+	<div class="prepend-1 span-2 append-2">
+	  <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
 
-	<a name="fb_share" type="button" share_url="http://flamesgame.appspot.com"></a>
+	  <a name="fb_share" type="button" share_url="http://flamesgame.appspot.com"></a>
+	</div>
       </div>
     </div>
   <body>
