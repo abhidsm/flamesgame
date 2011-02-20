@@ -18,4 +18,5 @@ function resetResultClass(){
     $('#result').addClass('center');
     $('#result').addClass('span-11');
     $('#result').addClass('last');
+    $('#result').show();
 }
