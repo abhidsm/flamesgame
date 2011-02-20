@@ -10,9 +10,25 @@
 .title-div, .title-div h2 { border-top-right-radius: 8px; -moz-border-radius-topright: 8px; -webkit-border-top-right-radius: 8px; border-top-left-radius: 8px; -moz-border-radius-topleft: 8px; -webkit-border-top-left-radius: 8px; }
 .content-div {  padding-top: 20px;}
 .content-div, .title-div, .footer { border-left: 1px solid #E4287C; border-right: 1px solid #E4287C; }
-.F h3{ color: #FDD017 }
-.L h3{ color: #FF00FF }
-.A h3{ color: #6698FF }
-.M h3{ color: #B93B8F }
-.E h3{ color: #FF0000 }
-.S h3{ color: #87F717 }
+#submit {
+    border-bottom-right-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px; -moz-border-radius-topleft: 8px; -webkit-border-top-left-radius: 8px;
+    background-color: #800517 !important;
+    color: white;
+}
+.F { background-color: #FDD017 }
+.L { background-color: #FF00FF }
+.A { background-color: #6698FF }
+.M { background-color: #B93B8F }
+.E { background-color: #FF0000 }
+.S { background-color: #87F717 }
+
+#result {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+#result h3 {
+    margin-top: 15 px;
+}
