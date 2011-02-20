@@ -52,7 +52,7 @@
 	    <div class="prepend-5 span-2 append-5 last"><input type="submit" value="Show Me"></div>
 	  </form>
 	  <hr class="space">
-	  <div class="center span-12 last"> 
+	  <div class="center span-12 last {%if status%}{{status}}{%endif%}"> 
 	    <h3>{%if result%}{{result}}{%endif%}</h3>
 	  </div>
 	</div>
