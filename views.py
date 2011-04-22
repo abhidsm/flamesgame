@@ -15,7 +15,9 @@
 import os
 import flames
 import django
+from django.utils import simplejson
 from django import http
+from django.http import HttpResponse
 from django import shortcuts
 from google.appengine.api import mail
 import threading
@@ -24,16 +26,18 @@ def index(request):
     return shortcuts.render_to_response('index.html', {'allow_share' : 'on'})
 
 def show(request):
-    your_name = request['your_name']
-    partner_name = request['partner_name']
-    result = flames.calculate(your_name, partner_name)
-    final_result = get_result(result, partner_name)
-    allow_share = request.POST.get('allow_share','')
-#    if allow_share == '' :
-    SendEmail('Flames Result for ' + your_name + " and " + partner_name, final_result).start()
-    share_message = "Do you want to know what type of relationship you are going to have with your dream partner? Check "
-    return shortcuts.render_to_response('index.html',{'result' : final_result, 'your_name' : your_name, 'partner_name' : partner_name, 'share_message' : share_message, 'allow_share' : allow_share })
-
+    if len(request['security']) == 0 :
+        your_name = request['your_name']
+        partner_name = request['partner_name']
+        result = flames.calculate(your_name, partner_name)
+        final_result = get_result(result, partner_name)
+        allow_share = request.POST.get('allow_share','')
+    #    if allow_share == '' :
+        SendEmail('Flames Result for ' + your_name + " and " + partner_name, final_result).start()
+        share_message = "Do you want to know what type of relationship you are going to have with your dream partner? Check "
+    #    return shortcuts.render_to_response('index.html',{'result' : final_result, 'status': result, 'your_name' : your_name, 'partner_name' : partner_name, 'share_message' : share_message, 'allow_share' : allow_share })
+        data = {"flames": {"result": final_result, "status": result}}
+        return HttpResponse(simplejson.dumps(data))
 
 def get_result(result, partner_name):
     if result == 'F':

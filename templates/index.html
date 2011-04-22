@@ -39,6 +39,7 @@
 	<div class="title-div span-12"><h2 class="center span-12 last">Do you know your partner?</h2></div>
 	<div class="span-12 content-div">
 	  <form id="flames-form" action="{%url views.show%}" method="post">
+	    <input type="hidden" name="security" value=""/>
 	    <div class="prepend-1 span-11 last">
 	      <label for="your_name">Your Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
 	      <input type="text" class="title" name="your_name" id="your_name" value="{%if your_name%}{{your_name}}{%endif%}"/>
