@@ -8,13 +8,16 @@
           border-bottom-left-radius: 8px; -moz-border-radius-bottomleft: 8px; -webkit-border-bottom-left-radius: 8px;}
 .title-div h2 { background-color: #E4287C; color: white; margin-bottom: 0;}
 .title-div, .title-div h2 { border-top-right-radius: 8px; -moz-border-radius-topright: 8px; -webkit-border-top-right-radius: 8px; border-top-left-radius: 8px; -moz-border-radius-topleft: 8px; -webkit-border-top-left-radius: 8px; }
-.content-div {  padding-top: 20px;}
+.content-div {  padding-top: 20px; padding-bottom: 20px;}
 .content-div, .title-div, .footer { border-left: 1px solid #E4287C; border-right: 1px solid #E4287C; }
 #submit {
     border-bottom-right-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px;
     border-top-left-radius: 8px; -moz-border-radius-topleft: 8px; -webkit-border-top-left-radius: 8px;
     background-color: #800517 !important;
     color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
 }
 .F { background-color: #FDD017 }
 .L { background-color: #FF00FF }
@@ -27,7 +30,6 @@
     display: none;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 10px;
     padding-top: 15px;
     border-bottom-right-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px;
     border-top-left-radius: 8px; -moz-border-radius-topleft: 8px; -webkit-border-top-left-radius: 8px;
