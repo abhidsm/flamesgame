@@ -20,7 +20,7 @@ function resetResultClass(){
     $('#result').addClass('center');
     $('#result').addClass('span-11');
     $('#result').addClass('last');
-    $('#result').show();
+    $('#result').fadeIn('slow').delay(2000).fadeOut('slow'); 
 }
 
 function bindFormValidation() {
