@@ -1,3 +1,11 @@
+from google.appengine.ext import db
+
+class Flames(db.Model):
+    your_name = db.StringProperty()
+    partner_name = db.StringProperty()
+    result = db.StringProperty()
+    created_at = db.DateTimeProperty(auto_now_add=True)
+
 def flames_count(male_name, female_name):
     male_name_list = list(male_name)
     female_name_list = list(female_name)
