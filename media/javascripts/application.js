@@ -20,7 +20,9 @@ function resetResultClass(){
     $('#result').addClass('center');
     $('#result').addClass('span-11');
     $('#result').addClass('last');
-    $('#result').fadeIn('slow').delay(2000).fadeOut('slow'); 
+
+    setTimeout(function(){ $('#load').hide();  $('#submit').show();     $('#result').fadeIn('slow').delay(2000).fadeOut('slow'); }, 2000);
+
 }
 
 function bindFormValidation() {
@@ -35,6 +37,8 @@ function bindFormValidation() {
 		    },
 		focusCleanup: true,
 		submitHandler: function(form) {
+		$('#load').show();
+		$('#submit').hide();
 		formSubmitAction();
 	    }
 	});
