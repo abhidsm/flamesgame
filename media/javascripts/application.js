@@ -3,7 +3,7 @@ $(document).ready(function(){
     });
 
 function formSubmitAction() {
-    $.post($("#flames-form").attr('action'),
+    $.post('/show',
 	   $("#flames-form").serialize(),
 	   function(data){
 	       response = JSON.parse(data);
@@ -35,7 +35,6 @@ function bindFormValidation() {
 		your_name: "Please enter your name",
 		partner_name: "Please enter your partner name"
 		    },
-		focusCleanup: true,
 		submitHandler: function(form) {
 		$('#load').show();
 		$('#submit').hide();
