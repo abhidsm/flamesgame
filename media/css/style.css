@@ -12,7 +12,7 @@ label.error {
     padding-left: 30px;
 }
 .header, .footer {  margin-right:0;  clear: both; }
-.header {background-color: #800517 !important; height: 50px; width: auto; min-width: 950px; margin-bottom: 50px;}
+.header {background-color: #96134E !important; height: 50px; width: auto; min-width: 950px; margin-bottom: 50px;}
 .header h1 { color: #fff !important; padding:3px !important;} 
 .center { text-align: center; }
 .footer { padding-top: 10px; background-color: #E4287C; height: 30px; 
@@ -25,11 +25,12 @@ label.error {
 #submit {
     border-bottom-right-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px;
     border-top-left-radius: 8px; -moz-border-radius-topleft: 8px; -webkit-border-top-left-radius: 8px;
-    background-color: #800517 !important;
+    background-color: #96134E !important;
     color: white;
     padding: 8px;
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 .F { background-color: #FDD017 }
 .L { background-color: #FF00FF }
