@@ -1,4 +1,20 @@
 /*body { background-image: url("../../media/images/bg.jpg") !important; background-repeat: repeat !important; }*/
+.android-app span {
+    font-size: 1.5em;
+}
+
+.android-app a {
+    text-decoration: none;
+    color: #96134E;
+}
+.android-app a:hover {
+    color: black;
+}
+
+.android-app img {
+    margin-bottom: -6px;
+}
+
 label.error {
     border: none !important;
     background: none !important;

@@ -5,6 +5,10 @@ api_version: 1
 
 handlers:
 
+- url: /FlamesGameAndroid.apk
+  static_files: FlamesGameAndroid.apk
+  upload: FlamesGameAndroid.apk
+
 - url: /robots.txt
   static_files: robots.txt
   upload: robots.txt
