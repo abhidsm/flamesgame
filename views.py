@@ -39,7 +39,7 @@ def show(request):
         share_message = "Do you want to know what type of relationship you are going to have with your dream partner? Check "
     #    return shortcuts.render_to_response('index.html',{'result' : final_result, 'status': result, 'your_name' : your_name, 'partner_name' : partner_name, 'share_message' : share_message, 'allow_share' : allow_share })
         data = {"flames": {"result": final_result, "status": result}}
-        flames_data = flames.Flames(your_name = your_name, partner_name = partner_name, result = result)
+        flames_data = flames.Flames(your_name = your_name, partner_name = partner_name, result = result, source = request['source'])
         flames_data.put()
         return HttpResponse(simplejson.dumps(data))
 

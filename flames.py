@@ -4,6 +4,7 @@ class Flames(db.Model):
     your_name = db.StringProperty()
     partner_name = db.StringProperty()
     result = db.StringProperty()
+    source = db.StringProperty()
     created_at = db.DateTimeProperty(auto_now_add=True)
 
 def flames_count(male_name, female_name):
