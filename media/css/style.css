@@ -27,9 +27,15 @@ label.error {
     display: none;
     padding-left: 30px;
 }
+p {font-size: 1.2em !important;}
+ol, li {font-size: 1.1em !important;}
 .header, .footer {  margin-right:0;  clear: both; }
 .header {background-color: #96134E !important; height: 50px; width: auto; min-width: 950px; margin-bottom: 50px;}
 .header h1 { color: #fff !important; padding:3px !important;} 
+.header h1 a { color: #fff; text-decoration:none;}
+.header .links a, .header .links a:hover {float: right; color: white; font-size: 1.3em; padding: 15px 5px 5px 5px;}
+.header .links a { text-decoration: none; }
+.header .links a:hover { text-decoration: underline; }
 .center { text-align: center; }
 .footer { padding-top: 10px; background-color: #E4287C; height: 30px; 
           border-bottom-right-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px;

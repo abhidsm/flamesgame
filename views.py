@@ -25,7 +25,7 @@ import threading
 import datetime
 
 def index(request):
-    return shortcuts.render_to_response('index.html', {'allow_share' : 'on'})
+    return shortcuts.render_to_response('index.html', {'page' : 'flames'})
 
 def show(request):
     if len(request['security']) == 0 :
@@ -42,6 +42,9 @@ def show(request):
         flames_data = flames.Flames(your_name = your_name, partner_name = partner_name, result = result, source = request['source'])
         flames_data.put()
         return HttpResponse(simplejson.dumps(data))
+
+def algorithm(request):
+    return shortcuts.render_to_response('algorithm.html', {'page' : 'algorithm'})
 
 def get_result(result, partner_name):
     if result == 'F':
