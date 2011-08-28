@@ -23,7 +23,7 @@
 	<label for="allow_share">Share the result with Flames ( Facebook, Twitter, Buzz )</label>
       </div>
       <hr class="space">
-      <div class="prepend-5 span-2 append-5 last"><img src="media/images/ajax-loader.gif" id="load"/><input id="submit" type="submit" value="Show Me"></div>
+      <div class="prepend-5 span-2 append-5 last"><img src="media/images/ajax-loader.gif" id="load"/><input id="submit" type="submit" value="Show Me" onClick="javascript:pageTracker._trackPageview('/show');" ></div>
     </form>
     <hr class="space">
     <div id="result" class="center span-10 clear {%if status%}{{status}}{%endif%}"> 
@@ -48,7 +48,7 @@
     </div>
   </div>
   <div class="android-app center span-12 prepend-top">
-    <a href="/FlamesGameAndroid.apk"><img src="media/images/android.png" id="android-img"/>
+    <a href="/FlamesGameAndroid.apk" onClick="javascript: _gaq.push(['_trackPageview', '/FlamesGameAndroid.apk']);"><img src="media/images/android.png" id="android-img"/>
       <span>FlamesGame for Android</span></a>
   </div>
 </div>
