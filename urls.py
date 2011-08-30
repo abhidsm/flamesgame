@@ -19,6 +19,7 @@ urlpatterns = patterns(
     '',
     (r'^$', 'views.index'),
     (r'^show$', 'views.show'),
-    (r'^algorithm$', 'views.algorithm')
+    (r'^algorithm$', 'views.algorithm'),
+    (r'^analytics$', 'views.analytics')
     )
 

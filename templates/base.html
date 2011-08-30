@@ -49,11 +49,14 @@
   <body>
     <div class="header">
       <div class="links">
-	{% ifnotequal page "flames" %}
-	<a href="/">Back to Home</a>
+	{% ifnotequal page "analytics" %}
+	<a href="/analytics">Analytics</a>
 	{% endifnotequal %}
 	{% ifnotequal page "algorithm" %}
 	<a href="/algorithm">How it works?</a>
+	{% endifnotequal %}
+	{% ifnotequal page "flames" %}
+	<a href="/">Back to Home</a>
 	{% endifnotequal %}
       </div>
       <h1><a href="/">Flames</a></h1>

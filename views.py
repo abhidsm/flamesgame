@@ -46,6 +46,23 @@ def show(request):
 def algorithm(request):
     return shortcuts.render_to_response('algorithm.html', {'page' : 'algorithm'})
 
+def analytics(request):
+    friends_count = flames.get_analytics_for_flames('F')
+    lovers_count = flames.get_analytics_for_flames('L')
+    affections_count = flames.get_analytics_for_flames('A')
+    marriages_count = flames.get_analytics_for_flames('M')
+    enemies_count = flames.get_analytics_for_flames('E')
+    sisters_count = flames.get_analytics_for_flames('S')
+    total = friends_count + lovers_count + affections_count + marriages_count + enemies_count + sisters_count
+    if total > 0:
+        friends_count = (friends_count * 100)/total
+        lovers_count = (lovers_count * 100)/total
+        affections_count = (affections_count * 100)/total
+        marriages_count = (marriages_count * 100)/total
+        enemies_count = (enemies_count * 100)/total
+        sisters_count = (sisters_count * 100)/total
+    return shortcuts.render_to_response('analytics.html', {'page' : 'analytics', 'friends_count' : friends_count, 'lovers_count' : lovers_count, 'affections_count' : affections_count, 'marriages_count' : marriages_count, 'enemies_count' : enemies_count, 'sisters_count' : sisters_count})
+
 def get_result(result, partner_name):
     if result == 'F':
         return "'" + partner_name + "' is your Friend"
