@@ -2,6 +2,10 @@
 
 {% block title %}Analytics{% endblock %}
 
+{% block description %}
+<meta name="description" content="FlamesGame analytics, which shows the percentage of users who got the results - Friend, Love, Affection, Marriage, Sister">
+{% endblock %}
+
 {% block content %}
 <img src="https://chart.googleapis.com/chart?cht=p3&chs=750x300&chxs=0,000000,14&chxt=x&chd=t:{{friends_count}},{{lovers_count}},{{affections_count}},{{marriages_count}},{{enemies_count}},{{sisters_count}}&chl=Friend({{friends_count}}%)|Love({{lovers_count}}%)|Affection({{affections_count}}%)|Marriage({{marriages_count}}%)|Enemy({{enemies_count}}%)|Sister({{sisters_count}}%)" alt="FlamesGame Analytics"/>
 {% endblock %}
