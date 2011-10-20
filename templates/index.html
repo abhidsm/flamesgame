@@ -5,6 +5,7 @@ marriage, enemy, sister{% endblock %}
 
 {% block description %}
 <meta name="description" content="Do you want to know what type of relationship(friendship,love,affection,marriage,enemy,sister) you are going to have with your dream partner? Then start with FlamesGame, you can call it as a relationship calculator or love calculator but this will calculate the relation using the names of you and your partner.">
+<script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'21abf337-23b8-4364-b61a-87c7c2e65d83'});</script>
 {% endblock %}
 
 {% block content %}
@@ -28,7 +29,7 @@ marriage, enemy, sister{% endblock %}
 	<label for="allow_share">Share the result with Flames ( Facebook, Twitter, Buzz )</label>
       </div>
       <hr class="space">
-      <div class="prepend-5 span-2 append-5 last"><img src="media/images/ajax-loader.gif" id="load"/><input id="submit" type="submit" value="Show Me" onClick="javascript:pageTracker._trackPageview('/show');" ></div>
+      <div class="prepend-5 span-2 append-5 last"><img src="media/images/ajax-loader.gif" id="load"/><input id="submit" type="submit" value="Show Me" onClick="javascript: _gaq.push(['_trackPageview', '/show']);" ></div>
     </form>
     <hr class="space">
     <div id="result" class="center span-10 clear {%if status%}{{status}}{%endif%}"> 
@@ -36,21 +37,7 @@ marriage, enemy, sister{% endblock %}
     </div>
   </div>
   <div class="footer span-12">
-    <div class="prepend-1 span-2">
-      <a href="http://www.google.com/buzz/post" class="google-buzz-button" title="Google Buzz" data-message="Do you want to know what type of relationship you are going to have with your dream partner?" data-url="http://www.flamesgame.appspot.com" data-locale="en" data-button-style="small-count"></a>
-      <script type="text/javascript" src="http://www.google.com/buzz/api/button.js"></script>
-    </div>
-    <div class="prepend-1 span-2">
-      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-counturl="http://flamesgame.appspot.com" data-url="http://flamesgame.appspot.com" data-text="Do you want to know what type of relationship you are going to have with your dream partner? Check ">Tweet</a>
-    </div>
-    <div class="prepend-1 span-2">
-      <fb:like href="http://flamesgame.appspot.com" layout="button_count" show_faces="true" width="100"></fb:like>
-    </div>
-    <div class="span-2">
-      <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
-
-      <a name="fb_share" type="button" share_url="http://flamesgame.appspot.com"></a>
-    </div>
+    <span  class='st_linkedin_button' displayText='LinkedIn'></span><span  class='st_email_button' displayText='Email'></span><span  class='st_twitter_button' displayText='Tweet'></span><span  class='st_facebook_button' displayText='Facebook'></span><span  class='st_fblike_hcount' ></span><span  class='st_plusone_button' ></span>
   </div>
   <div class="android-app center span-12 prepend-top">
     <a href="/FlamesGameAndroid.apk" onClick="javascript: _gaq.push(['_trackPageview', '/FlamesGameAndroid.apk']);"><img src="media/images/android.png" id="android-img"/>

@@ -37,7 +37,7 @@ ol, li {font-size: 1.1em !important;}
 .header .links a { text-decoration: none; }
 .header .links a:hover { text-decoration: underline; }
 .center { text-align: center; }
-.footer { padding-top: 10px; background-color: #E4287C; height: 30px; 
+.footer { text-align: center; padding-top: 10px; background-color: #E4287C; height: 30px; 
           border-bottom-right-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px;
           border-bottom-left-radius: 8px; -moz-border-radius-bottomleft: 8px; -webkit-border-bottom-left-radius: 8px;}
 .title-div h2 { background-color: #E4287C; color: white; margin-bottom: 0;}
