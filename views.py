@@ -35,7 +35,7 @@ def show(request):
         final_result = get_result(result, partner_name)
         allow_share = request.POST.get('allow_share','')
     #    if allow_share == '' :
-        SendEmail('Flames Result for ' + your_name + " and " + partner_name, final_result).start()
+    #    SendEmail('Flames Result for ' + your_name + " and " + partner_name, final_result).start()
         share_message = "Do you want to know what type of relationship you are going to have with your dream partner? Check "
     #    return shortcuts.render_to_response('index.html',{'result' : final_result, 'status': result, 'your_name' : your_name, 'partner_name' : partner_name, 'share_message' : share_message, 'allow_share' : allow_share })
         data = {"flames": {"result": final_result, "status": result}}
