@@ -9,7 +9,7 @@ class Flames(db.Model):
 
 def get_analytics_for_flames(value):
     result = db.GqlQuery("SELECT * FROM Flames WHERE result = :1",value)
-    return result.count()
+    return result.count(9999999)
 
 def flames_count(male_name, female_name):
     male_name_list = list(male_name)
