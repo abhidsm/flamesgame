@@ -8,8 +8,12 @@ class Flames(db.Model):
     created_at = db.DateTimeProperty(auto_now_add=True)
 
 def get_analytics_for_flames(value):
-    result = db.GqlQuery("SELECT * FROM Flames WHERE result = :1",value)
-    return result.count(9999999)
+    result = db.GqlQuery("SELECT * FROM Flames")
+    count = 0
+    for flames_data in result:
+        if flames_data.result == value:
+            count+=1
+    return count
 
 def flames_count(male_name, female_name):
     male_name_list = list(male_name)
