@@ -9,6 +9,7 @@ class Flames(db.Model):
 
 def get_analytics_for_flames(value):
     result = db.GqlQuery("SELECT * FROM Flames")
+    result.fetch(100)
     count = 0
     for flames_data in result:
         if flames_data.result == value:
