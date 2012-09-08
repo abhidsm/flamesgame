@@ -7,5 +7,5 @@
 {% endblock %}
 
 {% block content %}
-<img src="https://chart.googleapis.com/chart?cht=p3&chs=750x300&chxs=0,000000,14&chxt=x&chd=t:{{friends_count}},{{lovers_count}},{{affections_count}},{{marriages_count}},{{enemies_count}},{{sisters_count}}&chl=Friend({{friends_count}}%)|Love({{lovers_count}}%)|Affection({{affections_count}}%)|Marriage({{marriages_count}}%)|Enemy({{enemies_count}}%)|Sister({{sisters_count}}%)" alt="FlamesGame Analytics"/>
+<img src="https://chart.googleapis.com/chart?cht=p3&chs=750x300&chxs=0,000000,14&chxt=x&chd=t:{{(friends_count * 100)/total}},{{(lovers_count * 100)/total}},{{(affections_count * 100)/total}},{{(marriages_count * 100)/total}},{{(enemies_count * 100)/total}},{{(sisters_count * 100)/total}}&chl=Friend({{friends_count}}%)|Love({{lovers_count}}%)|Affection({{affections_count}}%)|Marriage({{marriages_count}}%)|Enemy({{enemies_count}}%)|Sister({{sisters_count}}%)" alt="FlamesGame Analytics"/>
 {% endblock %}
