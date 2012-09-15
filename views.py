@@ -47,12 +47,13 @@ def algorithm(request):
     return shortcuts.render_to_response('algorithm.html', {'page' : 'algorithm'})
 
 def analytics(request):
-    friends_count = flames.get_analytics_for_flames('F')
-    lovers_count = flames.get_analytics_for_flames('L')
-    affections_count = flames.get_analytics_for_flames('A')
-    marriages_count = flames.get_analytics_for_flames('M')
-    enemies_count = flames.get_analytics_for_flames('E')
-    sisters_count = flames.get_analytics_for_flames('S')
+    analytics_data = flames.get_analytics_for_flames()
+    friends_count = analytics_data['friends_count']
+    lovers_count = analytics_data['lovers_count']
+    affections_count = analytics_data['affections_count']
+    marriages_count = analytics_data['marriages_count']
+    enemies_count = analytics_data['enemies_count']
+    sisters_count = analytics_data['sisters_count']
     total = friends_count + lovers_count + affections_count + marriages_count + enemies_count + sisters_count
     return shortcuts.render_to_response('analytics.html', {'page' : 'analytics', 'friends_count' : friends_count, 'lovers_count' : lovers_count, 'affections_count' : affections_count, 'marriages_count' : marriages_count, 'enemies_count' : enemies_count, 'sisters_count' : sisters_count, 'total' : total})
 

@@ -7,14 +7,23 @@ class Flames(db.Model):
     source = db.StringProperty()
     created_at = db.DateTimeProperty(auto_now_add=True)
 
-def get_analytics_for_flames(value):
+def get_analytics_for_flames():
     result = db.GqlQuery("SELECT * FROM Flames")
-    result.fetch(100)
-    count = 0
+    friends_count = lovers_count = affections_count = marriages_count = enemies_count = sisters_count = 0
     for flames_data in result:
-        if flames_data.result == value:
-            count+=1
-    return count
+        if flames_data.result == 'F':
+            friends_count+=1
+        elif flames_data.result == 'L':
+            lovers_count+=1
+        elif flames_data.result == 'A':
+            affections_count+=1
+        elif flames_data.result == 'M':
+            marriages_count+=1
+        elif flames_data.result == 'E':
+            enemies_count+=1
+        elif flames_data.result == 'S':
+            sisters_count+=1
+    return {'friends_count': friends_count, 'lovers_count': lovers_count, 'affections_count': affections_count, 'marriages_count': marriages_count, 'enemies_count': enemies_count, 'sisters_count': sisters_count}
 
 def flames_count(male_name, female_name):
     male_name_list = list(male_name)
