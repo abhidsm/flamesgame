@@ -30,8 +30,9 @@ sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
+
 try:
-  from django import v0_96 as django
+  from django import v1_5 as django
 except ImportError:
   pass
 

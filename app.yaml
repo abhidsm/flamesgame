@@ -1,7 +1,6 @@
-application: flamesgame
-version: 1
-runtime: python
+runtime: python27
 api_version: 1
+threadsafe: false
 
 handlers:
 
@@ -43,3 +42,6 @@ handlers:
 - url: .*
   script: main.py
 
+libraries:
+- name: django
+  version: "1.5"

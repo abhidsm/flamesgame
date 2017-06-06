@@ -23,7 +23,16 @@ ADMINS = ()
 
 MANAGERS = ADMINS
 
-DATABASES = {}
+DATABASES = {
+    'default': {  # Leave this blank, we do not want a 'default' database defined.
+        'ENGINE': '',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+}
 
 DATABASE_ENGINE = ''           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'ado_mssql'.
 DATABASE_NAME = ''             # Or path to database file if using sqlite3.
@@ -70,9 +79,20 @@ APPEND_SLASH = False
 SECRET_KEY = 'hubba-hubba'
 
 # List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-)
+if DEBUG:
+    TEMPLATE_LOADERS = [
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',      
+    ]
+else:
+    TEMPLATE_LOADERS = [
+        ('django.template.loaders.cached.Loader',(
+            'django.template.loaders.filesystem.Loader',
+            'django.template.loaders.app_directories.Loader',
+            'forum.modules.template_loader.module_templates_loader',
+            'forum.skins.load_template_source',
+            )),
+    ]
 
 MIDDLEWARE_CLASSES = (
 )

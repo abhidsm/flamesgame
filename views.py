@@ -28,9 +28,9 @@ def index(request):
     return shortcuts.render_to_response('index.html', {'page' : 'flames'})
 
 def show(request):
-    if len(request['security']) == 0 :
-        your_name = request['your_name']
-        partner_name = request['partner_name']
+    if len(request.POST['security']) == 0 :
+        your_name = request.POST['your_name']
+        partner_name = request.POST['partner_name']
         result = flames.calculate(your_name, partner_name)
         final_result = get_result(result, partner_name)
         allow_share = request.POST.get('allow_share','')
@@ -39,7 +39,7 @@ def show(request):
         share_message = "Do you want to know what type of relationship you are going to have with your dream partner? Check "
     #    return shortcuts.render_to_response('index.html',{'result' : final_result, 'status': result, 'your_name' : your_name, 'partner_name' : partner_name, 'share_message' : share_message, 'allow_share' : allow_share })
         data = {"flames": {"result": final_result, "status": result}}
-        flames_data = flames.Flames(your_name = your_name, partner_name = partner_name, result = result, source = request['source'])
+        flames_data = flames.Flames(your_name = your_name, partner_name = partner_name, result = result, source = request.POST['source'])
         flames_data.put()
         return HttpResponse(simplejson.dumps(data))
 
