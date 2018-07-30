@@ -21,6 +21,7 @@ marriage, enemy, sister{% endblock %}
   </script>
 </div>
 <div class="span-12">
+  <div class="alexa" style="padding:10px;font-weight:bold;text-align:center;font-size:15px;"><span style="color:red;">Announcement:</span> Our new <span style="color:#96134E;">Alexa Skill</span> for Flames Game is live (<a href="https://www.amazon.com/gp/product/B07FQ7SNYM?ie=UTF8&ref-suffix=ss_rw" target="NEW">Please Check</a>). You can even try this in your mobile app for Alexa (<a href="https://itunes.apple.com/us/app/amazon-alexa/id944011620" target="NEW">iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.amazon.dee.app" target="NEW">Android</a>) </div>
   <div class="title-div span-12"><h2 class="center span-12 last">Do you know your partner?</h2></div>
   <div class="span-12 content-div">
     <form id="flames-form" method="post">
@@ -42,7 +43,7 @@ marriage, enemy, sister{% endblock %}
       <div class="prepend-5 span-2 append-5 last"><img src="media/images/ajax-loader.gif" id="load"/><input id="submit" type="submit" value="Show Me" onClick="javascript: _gaq.push(['_trackPageview', '/show']);" ></div>
     </form>
     <hr class="space">
-    <div id="result" class="center span-10 clear {%if status%}{{status}}{%endif%}"> 
+    <div id="result" class="center span-10 clear {%if status%}{{status}}{%endif%}">
       <h3>{%if result%}{{result}}{%endif%}</h3>
     </div>
   </div>
@@ -51,7 +52,7 @@ marriage, enemy, sister{% endblock %}
   </div>
   <div class="android-app center span-12 prepend-top">
     <a href="http://market.android.com/details?id=com.flamesgame">
-      <img src="http://www.android.com/images/brand/60_avail_market_logo2.png"
+      <img src="media/images/GooglePlay.png" width="300px"
            alt="Available in Android Market" />
     </a>
   </div>
@@ -68,4 +69,3 @@ marriage, enemy, sister{% endblock %}
   </script>
 </div>
 {% endblock %}
-
